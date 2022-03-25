@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,11 @@ import { FooterComponent } from './footer/footer.component';
     SignupComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PostdetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
