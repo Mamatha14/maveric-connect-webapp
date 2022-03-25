@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http:HttpClient ) { }
+  constructor(private http:HttpClient , private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
 
 
   login(){
+    this.router.navigate(['/posts']);
     let body={
       email:this.user.email,
       password:this.user.password
@@ -46,9 +48,8 @@ export class LoginComponent implements OnInit {
 
     console.log("Hello")
     console.log({...body});
-    let url="http://localhost:8000/auth/login";
-    // let url ="http://localhost:8000/posts";
-    // let url="https://apifromashu.herokuapp.com/api/login";
+    let url="http://localhost:8000/api/vi/posts";
+
 
     this.http.post(url,body,{
       headers:headers

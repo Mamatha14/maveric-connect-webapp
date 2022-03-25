@@ -32,10 +32,13 @@
             style="background-color: #214e8f; color: white"
             (click)="login()"
             class="btn"
+            routerLink="/login"
           >
             Login
           </button>
-          <p>New to Maveric Book? <a href="#">Signup</a></p>
+          <p>
+            New to Maveric Book? <a href="#" routerLink="/signup">Signup</a>
+          </p>
           <p><a href="#">Forgot Password</a></p>
         </div>
       </form>

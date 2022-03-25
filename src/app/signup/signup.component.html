@@ -16,28 +16,7 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="FirstName"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="SecondName"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="MiddleName"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="number"
-                        class="form-control"
-                        placeholder="PhoneNumber"
+                        placeholder="UserName"
                       />
                     </div>
 
@@ -47,54 +26,6 @@
                         class="form-control"
                         placeholder="Email"
                       />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Address"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="date"
-                        class="form-control"
-                        placeholder="Date of birth"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="number"
-                        class="form-control"
-                        placeholder="employeeNumber"
-                      />
-                    </div>
-                    <!-- <input /> -->
-                    <div class="dropdown show">
-                      <a
-                        class="btn btn-primary dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        style="background-color: #214e8f; color: white"
-                      >
-                        BloodGroup
-                      </a>
-
-                      <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <a class="dropdown-item" href="#">BloodGroup</a>
-
-                        <a class="dropdown-item" href="#">o+</a>
-
-                        <a class="dropdown-item" href="#">b+ </a>
-                      </div>
                     </div>
 
                     <div class="form-group">
@@ -111,24 +42,18 @@
                         placeholder="Confirm Password"
                       />
                     </div>
-                    <input type="radio" name="gender" value="male" /> Male
-                    <input type="radio" name="gender" value="female" /> Female
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="marrital status"
-                      />
-                    </div>
+
+                    <div class="form-group"></div>
                     <div>
                       <button
                         style="background-color: #214e8f; color: white"
                         type="submit"
                         class="btn btn-primary"
+                        routerLink="/signup"
                       >
                         SignUp
                       </button>
-                      <p>Already a member? <a href="#">Login</a></p>
+                      <p>Already a member? <a routerLink="/login">Login</a></p>
                     </div>
                   </form>
                 </div>
