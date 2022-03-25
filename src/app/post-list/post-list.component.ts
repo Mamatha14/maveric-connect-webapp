@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class PostListComponent implements OnInit {
   postArray: any =[];
   constructor(private http:HttpClient) {
-    let url="http://localhost:8000/posts";
+    let url="http://localhost:8000/api/v1/posts";
     this.http.get(url).subscribe((response:any)=>{
       console.log(response)
       this.postArray=response;
