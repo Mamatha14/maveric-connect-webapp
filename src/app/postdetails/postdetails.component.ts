@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-postdetails',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostdetailsComponent implements OnInit {
   post: any;
+  postId: any;
   postedBy: any = {};
   comments: any;
-  constructor(private http: HttpClient) {
-    let url = 'http://localhost:8000/api/v1/posts/623b6124c4fde245f8e01870';
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
+    this.postId = this.route.snapshot.params['id'];
+    let url = 'http://localhost:8000/api/v1/posts/' + this.postId;
+
     this.http.get(url).subscribe((response: any) => {
       console.log(response);
       this.post = response;
@@ -19,7 +23,7 @@ export class PostdetailsComponent implements OnInit {
     });
 
     let url1 =
-      'http://localhost:8000/api/v1/posts/623b6124c4fde245f8e01870/comments';
+      'http://localhost:8000/api/v1/posts/' + this.postId + '/comments';
     this.http.get(url1).subscribe((response: any) => {
       console.log(response);
       this.comments = response;

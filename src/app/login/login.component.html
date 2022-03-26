@@ -1,14 +1,15 @@
 <div class="card" style="align-items: center">
   <div class="card-body" style="width: 50%">
-    <h5 class="card-title">Login</h5>
     <div style="height: 60%; margin: auto">
+      <div style="padding: 20px"></div>
       <form (submit)="login()">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
             >Email address</label
           >
           <input
-            value="username"
+            style="text-align: center"
+            placeholder="username"
             type="email"
             class="form-control"
             [(ngModel)]="user.email"
@@ -16,16 +17,19 @@
             aria-describedby="emailHelp"
           />
         </div>
+        <div style="padding: 5px"></div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input
-            value="passsword"
+            style="text-align: center"
+            placeholder="passsword"
             type="password"
             [(ngModel)]="user.password"
             class="form-control"
             id="exampleInputPassword1"
           />
         </div>
+        <div style="padding: 5px"></div>
         <div style="text-align: center">
           <button
             type="submit"
@@ -36,6 +40,7 @@
           >
             Login
           </button>
+          <div style="padding: 5px"></div>
           <p>
             New to Maveric Book? <a href="#" routerLink="/signup">Signup</a>
           </p>
