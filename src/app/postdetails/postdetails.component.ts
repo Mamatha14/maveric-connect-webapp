@@ -17,6 +17,7 @@ export class PostdetailsComponent implements OnInit {
     let url = 'http://localhost:8000/api/v1/posts/' + this.postId;
 
     this.http.get(url).subscribe((response: any) => {
+      console.log('hello');
       console.log(response);
       this.post = response;
       this.postedBy = response.postedBy;
@@ -25,6 +26,7 @@ export class PostdetailsComponent implements OnInit {
     let url1 =
       'http://localhost:8000/api/v1/posts/' + this.postId + '/comments';
     this.http.get(url1).subscribe((response: any) => {
+      console.log('hello second');
       console.log(response);
       this.comments = response;
     });
